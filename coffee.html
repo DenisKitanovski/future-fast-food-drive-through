@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coffee</title>
+    <link rel="icon" href="img/home/logo_picture.jpg">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="fonts/glyphicons-halflings-regular.svg"></script>
+    <script type="text/javascript" src="jquery/jquery.js"></script>
+    <script type="text/javascript" src="jquery/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script>
+
+    </script>
+</head>
+<body id="bodyy">
+<div class="container" id="page">
+    <div class="row" >
+        <div class="col-lg-12 text-center" >
+            <a href="home.html"><img src="img/home/logo_picture.jpg" style="width:200px; height: 100px" class="img-rounded"></a>
+        </div>
+    </div>
+    <br/>
+    <div class="row">
+        <div class="col-lg-8"  >
+            <a href="home.html" class="left-menu">HOME</a> <a href="food.html" class="left-menu">FOOD</a><a href="drinks.html" class="left-menu">DRINKS</a><a href="coffee.html" class="left-menu" id="menuColor">COFFEE</a><a href="dessert.html" class="left-menu">DESSERT</a>
+        </div>
+        <div class="col-lg-1" id="putDropdown">
+
+            <div class="dropdown" id="drop">
+                <button class="btn btn-primary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" id="dropButton"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+                <ul class="dropdown-menu" id="dropList">
+                    <li class="text-info" id="btnBuy" ><button class="btn btn-sm btn-success pull-left" style="margin-left: 1%" id="buy" data-toggle="modal" data-target="#myModal" disabled="disabled" onclick="finalSum()"> Buy</button> <button class="btn btn-danger btn-sm" id="cl" onclick="clearr()" disabled="disabled">Clear</button></li>
+
+
+                </ul>
+
+            </div>
+
+        </div>
+        <div class="col-lg-3">
+
+            <input type="text" id="search" class="form-control pull-right search" placeholder="Search...">
+        </div>
+
+    </div>
+    <hr class="hrr"/>
+
+    <div class="container">
+        <div class="row listt">
+            <div class="col-lg-12">
+                <a href="#" class="food-link" id="one">
+                    <div class="food-list thumbnail">
+                        <div class="">
+                            <img src="img/coffee/strawberry.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                        </div>
+                        <div>
+                            <div class="food-name">Strawberry</div>
+                            <div class="row">
+                                <div class="col-lg-3 dollar">
+                                    $<span class="price" id="p1">2.89</span>
+                                </div>
+                                <div class="col-lg-9 pull-right">
+                                    <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="food-link" id="two">
+                    <div class="food-list thumbnail">
+                        <div class="">
+                            <img src="img/coffee/vanilla.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                        </div>
+                        <div>
+                            <div class="food-name">Vanilla</div>
+                            <div class="row">
+                                <div class="col-lg-3 dollar">
+                                    $<span class="price" id="p2">2.89</span>
+                                </div>
+                                <div class="col-lg-9 pull-right">
+                                    <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="food-link" id="three">
+                <div class="food-list thumbnail">
+                    <div class="">
+                        <img src="img/coffee/choco.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                    </div>
+                    <div>
+                        <div class="food-name">Chocolate</div>
+                        <div class="row">
+                            <div class="col-lg-3 dollar">
+                                $<span class="price" id="p3">2.89</span>
+                            </div>
+                            <div class="col-lg-9 pull-right">
+                                <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <a href="#" class="food-link" id="four">
+                    <div class="food-list thumbnail">
+                        <div class="">
+                            <img src="img/coffee/oreo.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                        </div>
+                        <div>
+                            <div class="food-name">Oreo</div>
+                            <div class="row">
+                                <div class="col-lg-3 dollar">
+                                   $<span class="price" id="p4">2.93</span>
+                                </div>
+                                <div class="col-lg-9 pull-right">
+                                    <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="food-link" id="five">
+                    <div class="food-list thumbnail">
+                        <div class="">
+                            <img src="img/coffee/coffee.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                        </div>
+                        <div>
+                            <div class="food-name">Coffee</div>
+                            <div class="row">
+                                <div class="col-lg-3 dollar">
+                                    $<span class="price" id="p5">1.39</span>
+                                </div>
+                                <div class="col-lg-9 pull-right">
+                                    <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="food-link" id="six">
+                    <div class="food-list thumbnail">
+                        <div class="">
+                            <img src="img/coffee/latte.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                        </div>
+                        <div>
+                            <div class="food-name">Latte</div>
+                            <div class="row">
+                                <div class="col-lg-3 dollar">
+                                    $<span class="price" id="p6">1.39</span>
+                                </div>
+                                <div class="col-lg-9 pull-right">
+                                    <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="food-link" id="seven">
+                    <div class="food-list thumbnail">
+                        <div class="">
+                            <img src="img/coffee/frappe-mocha.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                        </div>
+                        <div>
+                            <div class="food-name">Frape Mocha</div>
+                            <div class="row">
+                                <div class="col-lg-3 dollar">
+                                    $<span class="price" id="p7">2.39</span>
+                                </div>
+                                <div class="col-lg-9 pull-right">
+                                    <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+                <a href="#" class="food-link" id="eight">
+                <div class="food-list thumbnail">
+                    <div class="">
+                        <img src="img/coffee/hot-chocolate.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                    </div>
+                    <div>
+                        <div class="food-name">Hot Chocolate</div>
+                        <div class="row">
+                            <div class="col-lg-3 dollar">
+                                $<span class="price" id="p8">2.39</span>
+                            </div>
+                            <div class="col-lg-9 pull-right">
+                                <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+                <a href="#" class="food-link" id="nine">
+                    <div class="food-list thumbnail">
+                        <div class="">
+                            <img src="img/coffee/mango.jpg" class="img-responsive"  style="width:200px; height: 130px"/>
+                        </div>
+                        <div>
+                            <div class="food-name">Mango Pineapple </div>
+                            <div class="row">
+                                <div class="col-lg-3 dollar">
+                                    $<span class="price" id="p9">2.89</span>
+                                </div>
+                                <div class="col-lg-9 pull-right">
+                                    <button class="btn btn-sm btn-primary pull-right bHover"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+
+
+
+                <div id="details">
+                    <div class="row">
+
+                        <div class="col-lg-7">
+                            <div id="nameAppend"></div>
+                            <img class="img-responsive" id="imgAppend" >
+                            <br/>
+                            <div id="tabs" >
+                                <ul>
+                                    <li><a href="#tab1" style="color: black;">Nutrition</a></li>
+                                    <li><a href="#tab2" style="color: black;">Ingredients</a></li>
+                                </ul>
+
+                                <div id="tab1">
+                                    <table class="table" style="width: 100%">
+                                        <tr>
+                                            <td>Calories</td><td id="calories"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Fat</td><td id="total-fat"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total Crabs</td><td id="total-crabs"></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Proteins</td><td id="proteins"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div id="tab2">
+                                    <ul id="ingredients">
+
+                                    </ul>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-lg-4">
+
+                        </div>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="container">
+                            <div class="col-lg-10">
+                            </div>
+                            <div class="col-lg-2">
+                                <button type="button" class="btn btn-success pull-right btn-block" data-toggle="modal" data-target="#myModal" onclick="oneSumm()">Buy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div><h3 id="no_result" class="text-center">No results</h3></div>
+    <hr class="hrr"/>
+    <footer>
+        <div class="row">
+            <div class="col-lg-12"><div id="copyright">Copyright ©McDonald's 2017</div></div>
+        </div>
+
+    </footer>
+    <br/><br/>
+
+    <br/><br/>
+
+</div>
+
+<br/>
+<script>
+    $(document).ready(function(){
+        $(".bHover").hide();
+        $("#details").hide();
+        $("#tabs").tabs();
+        $("#no_result").hide();
+
+        $('#one').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p1").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Strawberry shake");
+                $('#imgAppend').attr('src','img/coffee/strawberry-bigpic.jpg');
+
+                $("#calories").html("510");
+                $("#total-fat").html("15g");
+                $("#total-crabs").html("62g");
+                $("#proteins").html("12g");
+
+                $("#ingredients").append("<li>VANILLA REDUCED FAT ICE CREAM</li>");
+                $("#ingredients").append("<li>STRAWBERRY SHAKE SYRUP</li>");
+                $("#ingredients").append("<li>WHIPPED LIGHT CREAM</li>");
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#two').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p2").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Vanilla shake");
+                $('#imgAppend').attr('src','img/coffee/vanilla-bigpic.jpg');
+
+                $("#calories").html("490");
+                $("#total-fat").html("15g");
+                $("#total-crabs").html("61g");
+                $("#proteins").html("11g");
+
+                $("#ingredients").append("<li>VANILLA REDUCED FAT ICE CREAM</li>");
+                $("#ingredients").append("<li>VANILLA SHAKE SYRUP</li>");
+                $("#ingredients").append("<li>WHIPPED LIGHT CREAM</li>");
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#three').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p3").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Chocolate shake");
+                $('#imgAppend').attr('src','img/coffee/choco-bigpic.jpg');
+
+                $("#calories").html("530");
+                $("#total-fat").html("15g");
+                $("#total-crabs").html("68g");
+                $("#proteins").html("12g");
+
+                $("#ingredients").append("<li>VANILLA REDUCED FAT ICE CREAM</li>");
+                $("#ingredients").append("<li>CHOCOLATE SHAKE SYRUP</li>");
+                $("#ingredients").append("<li>WHIPPED LIGHT CREAM</li>");
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#four').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p4").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Oreo");
+                $('#imgAppend').attr('src','img/coffee/oreo-bigpic.jpg');
+
+                $("#calories").html("510");
+                $("#total-fat").html("17g");
+                $("#total-crabs").html("60g");
+                $("#proteins").html("12g");
+
+                $("#ingredients").append("<li>VANILLA REDUCED FAT ICE CREAM</li>");
+                $("#ingredients").append("<li>OREO COOKIE PIECES</li>");
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#five').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p5").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Coffee");
+                $('#imgAppend').attr('src','img/coffee/coffee.jpg');
+
+                $("#calories").html("0");
+                $("#total-fat").html("0g");
+                $("#total-crabs").html("1g");
+                $("#proteins").html("2g");
+
+                $("#ingredients").append("<li>PREMIUM ROAST COFFEE</li>");
+
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#six').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p6").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Latte");
+                $('#imgAppend').attr('src','img/coffee/latte.jpg');
+
+                $("#calories").html("170");
+                $("#total-fat").html("9g");
+                $("#total-crabs").html("14g");
+                $("#proteins").html("9g");
+
+                $("#ingredients").append("<li>WHOLE MILK</li>");
+                $("#ingredients").append("<li>ESPRESSO</li>");
+
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#seven').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p7").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Frappe Mocha");
+                $('#imgAppend').attr('src','img/coffee/frappe-mocha.jpg');
+
+                $("#calories").html("290");
+                $("#total-fat").html("11g");
+                $("#total-crabs").html("40g");
+                $("#proteins").html("8g");
+
+                $("#ingredients").append("<li>WHOLE MILK</li>");
+                $("#ingredients").append("<li>ESPRESSO</li>");
+                $("#ingredients").append("<li>ICE</li>");
+                $("#ingredients").append("<li>CHOCOLATE SYRUP</li>");
+                $("#ingredients").append("<li>WHIPPED TOPPING</li>");
+                $("#ingredients").append("<li>CHOCOLATE DRIZZLE</li>");
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#eight').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p8").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Hot Chocolate");
+                $('#imgAppend').attr('src','img/coffee/hot-chocolate.jpg');
+
+                $("#calories").html("360");
+                $("#total-fat").html("13g");
+                $("#total-crabs").html("50g");
+                $("#proteins").html("11g");
+
+                $("#ingredients").append("<li>WHOLE MILK</li>");
+                $("#ingredients").append("<li>CHOCOLATE SYRUP</li>");
+                $("#ingredients").append("<li>WHIPPED TOPPING</li>");
+                $("#ingredients").append("<li>CHOCOLATE DRIZZLE</li>");
+
+
+
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $('#nine').on({
+            'click': function(e){
+                if(e.target.class == ".bHover")
+                    return;
+                if($(e.target).closest('.bHover').length)
+                    return;
+
+                sessionStorage.setItem('oneSum',$("#p9").text());
+                $(".food-link").hide();
+
+
+                $("#nameAppend").html("Mango Pineapple Smoothie");
+                $('#imgAppend').attr('src','img/coffee/mango.jpg');
+
+                $("#calories").html("250");
+                $("#total-fat").html("0.5g");
+                $("#total-crabs").html("40g");
+                $("#proteins").html("2g");
+
+                $("#ingredients").append("<li>MANGO PINEAPPLE FRUIT BASE</li>");
+                $("#ingredients").append("<li>ICE</li>");
+                $("#ingredients").append("<li>LOWFAT SMOOTHIE YOGURT</li>");
+
+
+                $("#search").attr("disabled", true);
+                $("#details").show();
+            }
+        });
+        $("#search").on("keyup", function () {
+            var g = $(this).val().toLowerCase();
+            var check="false";
+            $("#no_result").hide();
+            $(".food-link .food-name").each(function () {
+                var s = $(this).text().toLowerCase();
+
+                if (s.indexOf(g) != -1) {
+                    check="true";
+                    $(this).parent().parent().parent().show();
+                    $(this).parent().parent().parent().parent().css('float', 'left');
+
+
+                }
+                else {
+                    $(this).parent().parent().parent().hide();
+                    $(this).parent().parent().parent().parent().css('float', 'right');
+                }
+
+            });
+            if(check=="false"){
+                $("#no_result").show();
+            }
+        });
+
+    });
+</script>
+<div id="modall">
+
+</div>
+<script type="text/javascript">
+    if (sessionStorage.listHTML) {
+        $("#dropList").html(sessionStorage.listHTML);
+
+    }
+    var br= parseFloat(sessionStorage.getItem('coffeeSum'))||0,sum=0;
+    $(".bHover").on({
+        'click': function () {
+
+            var price= $(this).parent().siblings().children().text();
+            var name=$(this).parent().parent().siblings().text();
+            var img=$(this).parent().parent().parent().siblings().children().attr('src');
+
+            br+=parseFloat(price);
+            sessionStorage.setItem('coffeeSum', br);
+            var food = sessionStorage.getItem('foodSum');
+            var drink = sessionStorage.getItem('drinkSum');
+            var coffee = sessionStorage.getItem('coffeeSum');
+            var dessert = sessionStorage.getItem('dessertSum');
+            console.log(food);
+            console.log(drink);
+            console.log(coffee);
+            console.log(dessert);
+            food=food || 0;
+            drink = drink || 0;
+            coffee = coffee || 0;
+            dessert = dessert || 0;
+            sum=parseFloat(food)+parseFloat(drink)+parseFloat(coffee)+parseFloat(dessert);
+            console.log(sum);
+            $("#dropButton").css("color", "red");
+            $("#buy").attr("disabled", false);
+            $("#cl").attr("disabled", false);
+
+            $("#totalPrice").html(sum.toFixed(2));
+
+
+            $("#dropList").append('<a href="#"><div class="row"><div class="col-lg-4"><img src='+img+' style="width:60px;height:40px;padding-top: 4%"></div><div class="col-lg-8"><div>'+name+'</div><div style="color:green">'+price+'</div></div></div></a>');
+            window.sessionStorage.listHTML = $("#dropList").html();
+
+            sessionStorage.setItem('red', "red");
+            sessionStorage.setItem('disabled', "false");
+            sessionStorage.setItem('finall', sum.toFixed(2));
+        }
+    });
+
+    function clearr(){
+        location.href = "coffee.html";
+        sessionStorage.clear();
+    }
+
+    $("#dropButton").css("color",sessionStorage.getItem('red'));
+    $("#buy").css("color",sessionStorage.getItem('disabled'));
+    $("#cl").css("color",sessionStorage.getItem('disabled'));
+
+    function ok(){
+        sessionStorage.clear();
+    }
+    function finalSum(){
+        $("#totalPrice").html(sessionStorage.getItem('finall'));
+    }
+    function oneSumm(){
+        $("#totalPrice").text(sessionStorage.getItem('oneSum'));
+    }
+</script>
+
+<div class="modal fade " id="myModal" data-backdrop="false" style="background-color: rgba(0, 0, 0, 0.5);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" id="mHeader">
+                <div id="payHeader"> <div id="payment">Payment:</div><img id="cards" src="img/cards.png" class="pull-right img-responsive"></div>
+            </div>
+            <div class="modal-body">
+                <div id="payCard">
+                    <div><b>Card Number</b></div><br/>
+                    <div><input type="text" class="form-control" id="cardNum"></div>
+                    <span class="required" id="req1" hidden="hidden">*Required Field</span>
+                    <br/><div><b>Expiration Date</b></div><br/>
+                    <div>
+
+                        <select class="form-control" id="select1">
+                            <option>01</option><option>02</option><option>03</option><option>04</option><option>05</option><option>06</option><option>07</option>
+                            <option>08</option><option>09</option><option>10</option><option>11</option><option>12</option>
+                        </select>
+
+                        <select class="form-control" id="select2">
+                            <option>2017</option><option>2018</option><option>2019</option><option>2020</option><option>2021</option><option>2022</option>
+                            <option>2023</option><option>2024</option><option>2025</option><option>2026</option><option>2027</option><option>2028</option>
+                        </select>
+                        <span><b>Code </b></span><input type="password" id="code" class="form-control" maxlength="4">
+                        <div class="row">
+                            <div class="col-lg-8"></div>
+                            <div class="col-lg-4"> <span class="required" id="req2" hidden="hidden">*Required Field</span></div>
+                        </div>
+                    </div><br/>
+                    <button class="btn btn-block btn-primary"><span class="pull-left">TOTAL:</span><span id="moveDollar">$</span><span class="pull-right" id="totalPrice"></span></button>
+                </div>
+                <div id="finishCard" hidden="hidden">
+                    <h3 class="text-center"><i>Thank you for your order.</i></h3>
+                    <h3 class="text-center"><i>Your food will be arriving in a few minutes.</i></h3>
+                    <h3 class="text-center"><i>Enjoy your meal.</i></h3>
+                    <h3 class="text-center"><i>Your order ID is:</i></h3>
+                    <h3 class="text-center" id="orderID"></h3>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div class="row" id="payButtons">
+                    <div class="col-lg-8">
+
+
+                    </div>
+                    <div class="col-lg-4" id="mFooter">
+                        <button class="btn btn-danger " data-dismiss="modal" onclick="cancel()">Cancel</button>
+                        <button  class="btn btn-success" onclick="pay()">Pay</button>
+                    </div>
+                </div>
+                <div id="finishButton" hidden="hidden">
+                    <div class="text-center"><a class="btn btn-primary" href="home.html" onclick="ok()">OK</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

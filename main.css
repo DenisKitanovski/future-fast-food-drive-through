@@ -1,0 +1,162 @@
+#bodyy{
+background-color: #e6e6ff;
+}
+.hrr{
+    background-color: yellow;
+    height: 2px;
+}
+#page{
+
+    background-color: black;
+
+
+
+    border-radius: 2em;
+
+}
+#marginn{
+    margin-top: 2%;
+}
+#c1,#c2,#c3,#c4,#c5,#c6{
+
+    background: linear-gradient(to bottom, #d6cbd3, #ffffff);
+    font-family: "Times New Roman";
+}
+
+a h1{
+    color:black;
+}
+a:hover{
+    cursor: pointer;
+    text-decoration: none;
+
+}
+#copyright{
+    color:grey;
+}
+.a{
+    width: 48%;
+    float:left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+.food-list{
+    background: linear-gradient(to bottom,#d6cbd3, #ffffff);
+    margin-left:1%;
+    margin-right:1%;
+    width:200px;
+    height:200px;
+    float:left;
+}
+.food-name{
+    font-size:20px;
+}
+.price{
+    color:green;
+    font-size:20px;
+}
+.page-name{
+    font-size:30px;
+    color: yellow;
+    padding-left:140px;
+
+}
+.left-menu{
+    padding-right:10px;
+    padding-left:10px;
+    border-right: 1px solid grey;
+
+}
+.search{
+    margin-top:-3.2%;
+
+}
+
+.food-link img{
+    -webkit-transition: all 0.5s ease; /* Safari and Chrome */
+    -moz-transition: all 0.5s ease; /* Firefox */
+    -ms-transition: all 0.5s ease; /* IE 9 */
+    -o-transition: all 0.5s ease; /* Opera */
+    transition: all 0.5s ease;
+}
+.food-link:hover img{
+    -webkit-transform:scale(1.05); /* Safari and Chrome */
+    -moz-transform:scale(1.05); /* Firefox */
+    -ms-transform:scale(1.05); /* IE 9 */
+    -o-transform:scale(1.05); /* Opera */
+    transform:scale(1.05);
+}
+.nameAppend{
+    color:lightgrey;
+    font-size: 30px;
+}
+#nameAppend{
+    color:lightgrey;
+    font-size: 30px;
+}
+.sauce{
+   float:left;
+    margin:0.4%;
+    cursor: pointer;
+
+}
+.sauce:hover{
+    opacity: 0.6;
+}
+
+#select1,#select2,#code{
+    display: inline-block;
+    width:30%;
+}
+#payment{
+    width: 30%;
+    display: inline-block;
+    font-size: 27px;
+}
+#cards{
+    width: 270px;
+    height:40px;
+    display: inline-block;
+}
+#mHeader{
+    background-color: 	#F0FFFF;
+}
+#mFooter{
+    display: inline-block;
+}
+#shop{
+    margin-top:20%;
+    color:blue;
+    border: 1px solid blue;
+    background-color: white;
+}
+.bHover{
+    margin:1%;
+}
+.required{
+    color:red;
+}
+#menuColor{
+    text-decoration: dashed;
+    color:red;
+}
+#drop{
+    margin-top:-9%;
+    margin-left:60%;
+}
+#dropList{
+    width:200px;
+}
+.dollar{
+    font-size:20px;
+    color:green;
+}
+#cl{
+    margin-left:1%;
+}
+#btnBuy{
+    margin-bottom:3%;
+}
+#moveDollar{
+margin-left:82%;
+}
